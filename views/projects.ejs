@@ -1,0 +1,74 @@
+<!-- File Name: projects.ejs   Student Name: James Yan   Student ID: 301229536   Date: 09/30/2022 -->
+<!-- Importing Header -->
+<%- include partials/header.ejs %>
+
+<!-- Importing NavBar -->
+<%- include partials/main_nav.ejs %>
+
+<!-- MAIN PROJECTS SECTION -->
+<main class="container">
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+            <h1 class="display-1 fw-bolder"><%= title %></h1>
+            <p class="col-md-8 fs-4 pb-4">These are some projects that I have worked on in the past that I really enjoyed that helped me discover and become the programmer I am today!</p>
+            
+            <!-- Project #1 -->
+            <div class="container text-start pb-5">
+                <div class="row align-items-start">               
+                    <!-- Project #1 Description -->
+                    <div class="col mx-3">
+                        <p class="display-6">Fraction Calculator Application + GUI</p>
+                        <p class="fs-4">This was one of my favorite projects. Generally I am a very anal person and this project challenged me as it only allowed for the calculation of the numerator and denominator but it did not handle invalid input. By adding an additional conditional statement before the number input was accepted, it helped deal with invalid inputs and calculations. </p>
+                    </div>
+                    <!-- Project #1 Image -->
+                    <div class="col mx-3">
+                        <picture>
+                            <source srcset="./Assets/images/calculator.jpg" type="image/svg+xml">
+                            <img src="./Assets/images/calculator.jpg" class="img-fluid img-thumbnail bg-dark" alt="Calculator">
+                        </picture>                      
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project #2 -->
+            <div class="container text-start pb-5">
+                <div class="row align-items-start">               
+                    <!-- Project #2 Description -->
+                    <div class="col mx-3">
+                        <p class="display-6">Agile: Scrum Health Application Documentation</p>
+                        <p class="fs-4">The project required for students to collaborate and create documents through the Scrum Development Framework for an application of their choice. Not only was this one of my first experiences interacting with other students but it gave me a glimpse of expectations of a working in a professional environment but it allowed me to see the process of how software is developed from the beginning.</p>
+                    </div>
+                    <!-- Project #2 Image -->
+                    <div class="col mx-3">
+                        <picture>
+                            <source srcset="./Assets/images/brainstorm.jpg" type="image/svg+xml">
+                            <img src="./Assets/images/brainstorm.jpg" class="img-fluid img-thumbnail bg-dark" alt="Brainstorming">
+                        </picture>                      
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project #3 -->
+            <div class="container text-start">
+                <div class="row align-items-start">               
+                    <!-- Project #3 Description -->
+                    <div class="col mx-3">
+                        <p class="display-6">Banking Application + GUI</p>
+                        <p class="fs-4">The project was an accumulative of everything taught about object oriented programming. This project required us to create an application for a bank teller to perform transactions for customer accounts. Through the use of parent-child classes and instantiations of class methods and values, we were able to create customer accounts, search, view, withdraw, and deposit money from their respective account stored on a list.</p>
+                    </div>
+                    <!-- Project #3 Image -->
+                    <div class="col mx-3">
+                        <picture>
+                            <source srcset="./Assets/images/money.jpg" type="image/svg+xml">
+                            <img src="./Assets/images/money.jpg" class="img-fluid img-thumbnail bg-dark" alt="Money">
+                        </picture>                      
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<!-- Importing Scripts -->
+<%- include partials/footer.ejs %>

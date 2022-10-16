@@ -1,0 +1,39 @@
+<!-- File Name: about.ejs   Student Name: James Yan   Student ID: 301229536   Date: 09/30/2022 -->
+<!-- Importing Header -->
+<%- include partials/header.ejs %>
+
+<!-- Importing NavBar -->
+<%- include partials/main_nav.ejs %>
+
+<!-- MAIN ABOUT SECTION -->
+<main class="container">
+    <div class="p-5 mb-4 bg-light rounded-3">
+      <div class="container-fluid py-5">
+        
+        <!-- About Me Text Section-->
+        <h1 class="display-1 fw-bold"><%= firstName %> <%= lastName %></h1>
+        <h4 class="fs-5 pb-5 fw-semibold">Junior Software Developer, Software Engineering Student, and Tech Enthusiast in the Greater Toronto Area</h4>
+        
+        <!-- Columns -->
+        <div class="container text-start">
+          <div class="row align-items-start">
+            <!-- Column 1 -->
+            <div class="col fs-4 ">
+              <p>Hello World!</p>
+              <p>My name is <strong><%= firstName %></strong> and I am currently a student enrolled at <strong>Centennial College</strong> in the <strong>Software Engineering Technology - Artificial Intelligence</strong> program for an Advanced Diploma. Growing up from a very convservative background, I was fascinated as a child by technology and I still am today. I seek to the push the limits of todays latest cutting edge technology to see where it may take us later on in the future.</p>
+              <p>I am always seeking to make connections with new people and am seeking for work opportunities for co-op as a <strong>Junior Software Developer Intern.</strong> For any questions or concerns, please feel free to reach out!</p>
+              <p>Click Below For My Resume</p>
+              <a href="https://drive.google.com/file/d/16-4caa6aaKyP7zZ0svhf9VVbcZLg5hXL/view?usp=sharing">My Resume</a>
+            </div>
+            <!-- Column 2; Picture of Me -->
+            <picture class="col">
+              <source srcset="./Assets/images/me.jpg" type="image/svg+xml">
+              <img src="./Assets/images/me.jpg" class="img-fluid img-thumbnail bg-dark" alt="James Yan - 2022">
+            </picture>
+          </div>
+        </div>
+    </div>
+  </main>
+
+<!-- Importing Scripts -->
+<%- include partials/footer.ejs %>

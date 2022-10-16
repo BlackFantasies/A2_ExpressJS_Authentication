@@ -1,0 +1,36 @@
+<!-- File Name: index.ejs   Student Name: James Yan   Student ID: 301229536   Date: 09/30/2022 -->
+<!-- Importing Header -->
+<%- include partials/header.ejs %>
+
+<!-- Importing NavBar -->
+<%- include partials/main_nav.ejs %>
+
+  <!-- MAIN CONTENT SECTION -->
+  <main class="container">
+    <div class="p-5 mb-4 bg-light rounded-3">
+      <div class="container-fluid py-5">
+        <h1 class="display-1 fw-bolder">Welcome</h1>
+        <p class="col-md-8 fs-4">Thank you for taking the time to stop by and look at my humble website. Here you will find my portfolio work from my time at Centennial College.</p>
+        
+        <!-- Picture Content-->
+        <picture>
+          <source srcset="./Assets/images/indexlearning.jpg" type="image/svg+xml">
+          <img src="./Assets/images/indexlearning.jpg" class="img-fluid img-thumbnail bg-dark" alt="Learning Environment">
+        </picture>
+
+        <!-- Mission Statement -->
+        <h3 class="display-5 lh-lg pt-5 fw-bold">Mission Statement</h1>
+        <figure>
+          <blockquote class="blockquote fst-italic container-md fs-4">
+            <p class="col-md-8 fs-4">To contribute myself to the greater development of future technology and see the day where I will be able to safely sleep while driving.</p>
+          </blockquote>
+          <figcaption class="blockquote-footer container-md fs-5 pt-3">
+            <cite title="Source Title">James Yan</cite>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </main>
+
+<!-- Importing Scripts -->
+<%- include partials/footer.ejs %>

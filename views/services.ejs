@@ -1,0 +1,73 @@
+<!-- File Name: services.ejs   Student Name: James Yan   Student ID: 301229536   Date: 09/30/2022 -->
+<!-- Importing Header -->
+<%- include partials/header.ejs %>
+
+<!-- Importing NavBar -->
+<%- include partials/main_nav.ejs %>
+
+<!-- MAIN PROJECTS SECTION -->
+<main class="container">
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+            <h1 class="display-1 fw-bolder"><%= title %></h1>
+            <p class="col-md-8 fs-4 pb-4">The following below are a list of skills that I have accumulated along my educational study of programming that I am able utilize on the day job:</p>
+            <div class="col-md-11 ps-5">
+                
+                <!-- "Front End Development" Section -->
+                <div class="container text-start pb-5">
+                    <div class="row align-items-start">               
+                        <!-- "Front End Development" Description -->
+                        <div class="col mx-3">
+                            <p class="display-6">Front-End Development</p>
+                            <ul class="fs-5">
+                                <li>HTML Web Development</li>
+                                <li>CSS Styling</li>
+                                <li>Server Side Development</li>
+                                <li>API Integration</li>
+                                <li>Document Object Manipulation</li>
+                                <li>JSON Handling</li>
+                                <li>Express Javascript Development</li>
+                            </ul>
+                        </div>
+                        <!-- "Front End Development" Image -->
+                        <div class="col mx-3">
+                            <picture>
+                                <source srcset="./Assets/images/design.jpg" type="image/svg+xml">
+                                <img src="./Assets/images/design.jpg" class="img-fluid img-thumbnail bg-dark" alt="Designing">
+                            </picture>                      
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- "Back End Development" Section -->
+                <div class="container text-start pb-5">
+                    <div class="row align-items-start">               
+                        <!-- "Back End Development" Description -->
+                        <div class="col mx-3">
+                            <p class="display-6">Back-End Development</p>
+                            <ul class="fs-5">
+                                <li>Object Handling and Manipulation</li>
+                                <li>Error Handling</li>
+                                <li>IDE Development</li>
+                                <li>SQL Data Handling and Manipulation</li>
+                                <li>Bash System Navigation</li>
+                                <li>Front-End and Back-End Integration</li>
+                                <li>GIT Deployment</li>
+                            </ul>
+                        </div>
+                        <!-- "Back End Development" Image -->
+                        <div class="col mx-3">
+                            <picture>
+                                <source srcset="./Assets/images/coding.jpg" type="image/svg+xml">
+                                <img src="./Assets/images/coding.jpg" class="img-fluid img-thumbnail bg-dark" alt="Coding">
+                            </picture>                      
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Importing Scripts -->
+<%- include partials/footer.ejs %>

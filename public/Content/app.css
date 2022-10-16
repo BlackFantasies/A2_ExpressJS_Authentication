@@ -1,0 +1,20 @@
+/* File Name: app.css   Student Name: James Yan   Student ID: 301229536   Date: 09/30/2022 */
+/* HTML Body Element */
+body {
+    background-color: blanchedalmond;
+}
+
+/* Logo */
+#logo {
+    width: 50px;
+}
+
+/* HTML Link Hover */
+a:hover {
+    text-decoration: none;
+}
+
+/* HTML Link Active */
+a:active {
+    text-decoration: none;
+}

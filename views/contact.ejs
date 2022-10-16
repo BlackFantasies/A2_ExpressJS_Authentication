@@ -1,0 +1,55 @@
+<!-- File Name: contact.ejs   Student Name: James Yan   Student ID: 301229536   Date: 09/30/2022 -->
+<!-- Importing Header -->
+<%- include partials/header.ejs %>
+
+<!-- Importing NavBar -->
+<%- include partials/main_nav.ejs %>
+
+<!-- MAIN CONTACTS SECTION -->
+<main class="container">
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+            <h1 class="display-1 fw-bolder"><%= title %></h1>
+            <p class="col-md-8 fs-4 pb-2">Have a question? Interested in chatting! No problem! Let's stay connected! Fill out the form below and I will reach out!</p>
+            <p class="col-md-8 fs-4 pb-1">In a rush? Not a problem! You may find my contact information below as well!</p>
+            <p class="fs-5 pb-1">Email: jyan59@my.centennialcollege.ca</p>
+            <p class="fs-5 pb-4">LinkedIn: <a href="https://linkedin.com/in/james-yan">James Yan</a></p>
+            
+            <!-- FORM -->
+            <form method="post" action="mailto:jyan59@my.centennialcollege.ca" enctype="text/plain">
+                <!-- First Name Input -->
+                <div class="form-floating mb-3">                    
+                    <input name="fName" class="form-control" type="text" id="fName" placeholder="John" required>
+                    <label class="form-label" for="fName">First Name: </label>
+                </div>
+                <!-- Last Name Input -->
+                <div class="form-floating mb-3">                   
+                    <input name="lName" class="form-control" type="text" id="lName" placeholder="Doe" required>
+                    <label class="form-label" for="lName">Last Name: </label>
+                </div>
+                <!-- Phone Number Input -->
+                <div class="form-floating mb-3">                  
+                    <input name="phoneNumber" class="form-control" type="tel" id="phoneNumber" placeholder="416-111-5555">
+                    <label class="form-label" for="phoneNumber">Phone Number: </label>
+                </div>
+                <!-- Email Input -->
+                <div class="form-floating mb-3">                   
+                    <input name="eMail" class="form-control" type="email" id="eMail" placeholder="example@emaildomain.com" required>
+                    <label class="form-label" for="eMail">Email: </label>
+                </div>
+                <!-- Text Area -->
+                <div class="mb-3">
+                    <label class="form-label" for="textArea">Comments: </label>
+                    <textarea name="textArea" class="form-control" id="textArea" rows="5" required></textarea>
+                </div>
+                <!-- Submit Button -->
+                <div class="mb-3">
+                    <input type="submit" id="submit" value="Submit" class="btn btn-primary">
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+
+<!-- Importing Scripts -->
+<%- include partials/footer.ejs %>
