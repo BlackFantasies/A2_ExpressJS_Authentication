@@ -25,7 +25,7 @@
     "popper.js": "^1.16.1"
   },
   "description": "Assignment 1",
-  "main": "./config/app.js",
+  "main": "./server/config/app.js",
   "author": "James Yan",
   "license": "ISC",
   "repository": {
