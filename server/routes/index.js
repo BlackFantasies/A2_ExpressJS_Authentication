@@ -28,5 +28,14 @@ router.get('/login', indexController.displayLoginPage);
 /* POST Route for Processing the Login Page */
 router.post('/login', indexController.processLoginPage);
 
+/* GET Route for Displaying Register Page */
+router.get('/register', indexController.displayRegisterPage);
+
+/* POST Route for Processing the Register Page */
+router.post('/register', indexController.processRegisterPage);
+
+/* GET to Peform User Logout */
+router.post('/logout', indexController.performLogout);
+
 module.exports = router;
 

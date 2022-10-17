@@ -7,22 +7,33 @@ let Contact = require('../models/contact');
 
 let contactController = require('../controllers/contact');
 
+//  Function to Guard Responses
+function requireAuth(req, res, next) 
+{
+    //  Check if the user is logged in
+    if(!req.isAuthenticated())
+    {
+        return res.redirect('/login');
+    }
+    next();
+}
+
 /* GET Route for the Contacts List page - READ Operation */
 router.get('/', contactController.displayContactsList);
 
 /* GET Route for the Add page - CREATE Operation */
-router.get('/add', contactController.displayAddPage);
+router.get('/add', requireAuth, contactController.displayAddPage);
 
 /* POST Route for the Add page - CREATE Operation */
-router.post('/add', contactController.processAddPage);
+router.post('/add', requireAuth, contactController.processAddPage);
 
 /* GET Route for the Edit page - UPDATE Operation */
-router.get('/edit/:id', contactController.displayEditPage);
+router.get('/edit/:id', requireAuth, contactController.displayEditPage);
 
 /* POST Route for the Edit page - UPDATE Operation */
-router.post('/edit/:id', contactController.processEditPage);
+router.post('/edit/:id', requireAuth, contactController.processEditPage);
 
 /* GET to perform Delete operation - DELETE Operation */
-router.get('/delete/:id', contactController.performDelete);
+router.get('/delete/:id', requireAuth, contactController.performDelete);
 
 module.exports = router;

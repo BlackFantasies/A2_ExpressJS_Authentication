@@ -12,7 +12,7 @@ let User = mongoose.Schema
             trim: true,
             required: 'username is required'
         },
-         
+        /* 
         password:
         {
             type: String,
@@ -20,6 +20,7 @@ let User = mongoose.Schema
             trim: true,
             required: 'password is required'
         },
+        */
         
         email: 
         {
