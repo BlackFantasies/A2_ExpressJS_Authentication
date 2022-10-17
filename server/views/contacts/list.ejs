@@ -1,0 +1,51 @@
+<!-- Importing Header -->
+<%- include ../partials/header.ejs %>
+
+<!-- Importing NavBar -->
+<%- include ../partials/main_nav.ejs %>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="row">
+            <div class="col-md-offset-3 col-md-9">
+                <h1> <%= title %> </h1>
+                <a href="/contacts-list/add" class="btn btn-primary" role="button">
+                    <i class="fas fa-plus-circle"></i> Add a Contact 
+                </a>
+                <br>
+                <table class="table table-bordered table-striped table-hover">
+                    <!-- Header Row -->
+                    <tr>
+                        <th class="text-center col-2">Name</th>
+                        <th class="text-center col-2">Phone Number</th>
+                        <th class="text-center col-3">Email</th>
+                        <th class="text-center col-1"></th>
+                        <th class="text-center col-1"></th>
+                    </tr>
+
+                    <!-- Repeatable Template Row -->
+                    <% for(let count = 0; count < ContactsList.length; count++) { %>
+                        <tr>
+                            <td class="text-center col-2"><%= ContactsList[count].name %> </td>
+                            <td class="text-center col-2"><%= ContactsList[count].phoneNumber %> </td>
+                            <td class="text-center col-3"><%= ContactsList[count].email %> </td>
+                            <td class="text-center col-1">
+                                <a href="/contacts-list/edit/<%= ContactsList[count]._id %>" class="btn btn-primary">
+                                    <i class="fas fa-pencil alt"></i> Edit
+                                </a>
+                            </td>
+                            <td class="text-center col-1">
+                                <a href="/contacts-list/delete/<%= ContactsList[count]._id %>" class="btn btn-danger">
+                                    <i class="fas fa-trash-alt"></i> Delete
+                                </a>
+                            </td>
+                        </tr>
+                    <% } %> 
+                </table>
+            </div>
+        </div>
+    </main>
+
+
+<!-- Importing Scripts -->
+<%- include ../partials/footer.ejs %>
