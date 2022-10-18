@@ -10,10 +10,10 @@ module.exports.displayContactsList = (req, res, next) => {
         if(err){
             return console.error(err);
         }
-        else{
+        else{       
             res.render('contacts/list', {title: 'Business Contacts', ContactsList: contactsList});
         }
-    });
+    }).sort({name: 'asc'});
 }
 
 module.exports.displayAddPage = (req, res, next) => {
