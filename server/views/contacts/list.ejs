@@ -1,3 +1,4 @@
+<!-- File Name: list.ejs   Student Name: James Yan   Student ID: 301229536   Date: 10/21/2022 -->
 <!-- Importing Header -->
 <%- include ../partials/header.ejs %>
 
@@ -8,10 +9,14 @@
     <main class="container">
         <div class="row">
             <div class="col-md-offset-3 col-md-9">
-                <h1> <%= title %> </h1>
-                <a href="/contacts-list/add" class="btn btn-primary" role="button">
-                    <i class="fas fa-plus-circle"></i> Add a Contact 
-                </a>
+                <div class="pt-5">
+                    <h1> <%= title %> </h1>
+                </div>
+                <div>
+                    <a href="/contacts-list/add" class="btn btn-primary" role="button">
+                        <i class="fas fa-plus-circle"></i> Add a Contact
+                    </a>
+                </div>
                 <br>
                 <table class="table table-bordered table-striped table-hover">
                     <!-- Header Row -->

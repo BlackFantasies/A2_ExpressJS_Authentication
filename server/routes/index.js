@@ -35,7 +35,7 @@ router.get('/register', indexController.displayRegisterPage);
 router.post('/register', indexController.processRegisterPage);
 
 /* GET to Peform User Logout */
-router.post('/logout', indexController.performLogout);
+router.get('/logout', indexController.performLogout);
 
 module.exports = router;
 

@@ -1,3 +1,4 @@
+/* File Name: index.js   Student Name: James Yan   Student ID: 301229536   Date: 10/21/2022 */
 let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
@@ -8,23 +9,23 @@ let userModel = require('../models/user');
 let User = userModel.User   //  Alias
 
 module.exports.displayHomePage = (req, res, next) => {
-    res.render('index', {title: 'Home'});
+    res.render('index', {title: 'Home', displayName: req.user ? req.user.displayName : ''});
 }
 
 module.exports.displayAboutMePage = (req, res, next) => {
-    res.render('about', { title: 'About Me', firstName: 'James',  lastName: 'Yan' });
+    res.render('about', { title: 'About Me', firstName: 'James',  lastName: 'Yan' , displayName: req.user ? req.user.displayName : ''});
 }
 
 module.exports.displayProjectsPage = (req, res, next) => {
-    res.render('projects', {title: 'Projects'});
+    res.render('projects', {title: 'Projects', displayName: req.user ? req.user.displayName : ''});
 }
 
 module.exports.displayServicesPage = (req, res, next) => {
-    res.render('services', {title: 'Services'});
+    res.render('services', {title: 'Services', displayName: req.user ? req.user.displayName : ''});
 }
 
 module.exports.displayContactPage = (req, res, next) => {
-    res.render('contact', {title: 'Contact'});
+    res.render('contact', {title: 'Contact', displayName: req.user ? req.user.displayName : ''});
 }
 
 module.exports.displayLoginPage = (req, res, next) => {
@@ -34,7 +35,7 @@ module.exports.displayLoginPage = (req, res, next) => {
         {
             title: "Login",
             messages: req.flash('loginMessage'),
-            displayName: req.user ? req.user.displayName : ''
+            displayName: req.user ? req.user.displayName: ''
         })
     }
     else
@@ -69,7 +70,7 @@ module.exports.processLoginPage = (req, res, next) => {
 }
 
 module.exports.displayRegisterPage = (req, res, next) => {
-    //  Check if the user is not alread logged in
+    //  Check if the user is not already logged in
     if(!req.user)
     {
         res.render('auth/register',
@@ -126,6 +127,8 @@ module.exports.processRegisterPage = (req, res, next) => {
 }
 
 module.exports.performLogout = (req, res, next) => {
-    req.logout();
-    res.redirect('/');
+    req.logout(function(err) {
+        if (err) { return next(err); }
+        res.redirect('/');
+      });
 }

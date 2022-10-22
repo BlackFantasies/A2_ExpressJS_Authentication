@@ -1,3 +1,4 @@
+<!-- File Name: edit.ejs   Student Name: James Yan   Student ID: 301229536   Date: 10/21/2022 -->
 <!-- Importing Header -->
 <%- include ../partials/header.ejs %>
 
@@ -7,7 +8,7 @@
 <!-- Content for the Edit Page -->
 <div class="container">
     <div class="row">
-        <div class="offset-md-3 col-md-10">
+        <div class="offset-md-3 col-md-10 pt-5">
             <h1><%= title %></h1>
 
             <form method="POST" class="form">
@@ -25,12 +26,13 @@
                     <label for="emailTextField">eMail:</label>
                     <input type="text" class="form-control" id="emailTextField" placeholder="Enter the eMail of the Contact" name="email" value="<%= contact.email %>" required>
                 </div>
+                <div class="pt-2">
+                    <button class="btn btn-primary" type="submit">
+                        <i class="fas fa-edit"></i> Submit</button>
 
-                <button class="btn btn-primary" type="submit">
-                    <i class="fas fa-edit"></i> Submit</button>
-
-                    <a href="/contacts-list" class="btn btn-warning">
-                    <i class="fas fa-undo"></i> Cancel</a>
+                        <a href="/contacts-list" class="btn btn-warning">
+                        <i class="fas fa-undo"></i> Cancel</a>
+                </div>
             </form>
         </div>
         
